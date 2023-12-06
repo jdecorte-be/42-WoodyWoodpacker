@@ -1,3 +1,19 @@
+<h1 align="center">
+	📖 Woody Woodpacker
+</h1>
+
+<p align="center">
+	<b><i>Binary Injection Elf & Macho</i></b><br>
+</p>
+
+<p align="center">
+	<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/jdecorte-be/42-WoodyWoodpacker?color=lightblue" />
+	<img alt="Number of lines of code" src="https://img.shields.io/tokei/lines/github/jdecorte-be/42-WoodyWoodpacker?color=critical" />
+	<img alt="Code language count" src="https://img.shields.io/github/languages/count/jdecorte-be/42-WoodyWoodpacker?color=yellow" />
+	<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/jdecorte-be/42-WoodyWoodpacker?color=blue" />
+	<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/jdecorte-be/42-WoodyWoodpacker?color=green" />
+</p>
+
 ## How to make a packer ?
 
 A packer is a utility which wrap a binary file. It can compress it and/or encrypt it such a way that this binary, when launched, uncompress/decrypt by itself then run. This can be used to pass throught antivirus analysis or alleviate the target.
@@ -31,7 +47,7 @@ typedef struct
 } Elf64_Phdr;
 ```
 
-![a6d7fda1fac42cefdda50ea4a5aaeb42.jpg](./_resources/a6d7fda1fac42cefdda50ea4a5aaeb42.jpg)
+![a6d7fda1fac42cefdda50ea4a5aaeb42.jpg](./img/header.jpg)
 _There is an important dichotomy to understand between storage related fields and runtime related fields. In our program, we will refer to the first to overwrite data while the target is maped to memory whereas our shellcode which executes in runtime (uncrypt a specific area) will refer to the second_
 
 ## How to write a shellcode
@@ -223,7 +239,7 @@ rien à valider, la copie de travail est propre
 
 _I run here both ET_EXEC & ET_DYN (pie) targets and a target with a too small codecave_
 
-![vimdiff.jpg](./_resources/vimdiff.jpg)
+![vimdiff.jpg](./img/vimdiff.jpg)
 _This is a vimdiff of a basic hello_world C pgm with its associated woody at the left. We can see where modifications are and the encrypted .text section_
 
 ## Miscellaneous
